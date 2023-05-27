@@ -9,11 +9,11 @@ import java.util.Comparator;
 import java.util.Date;
 
 public class DateComparator implements Comparator<Item> {
-    private SimpleDateFormat dateFormat;
+    private SimpleDateFormat dateFormat; // used for parsing and formatting dates
     @Override
     public int compare(Item i1, Item i2) {
 
-        dateFormat = new SimpleDateFormat("dd/MM/yyyy"); //✅
+        dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
         Date date1 = null, date2 = null;
         try {
@@ -23,7 +23,14 @@ public class DateComparator implements Comparator<Item> {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        int result = date1.compareTo(date2);
+        int result = date1.compareTo(date2); // compare method takes two Item objects as parameters and returns an integer value indicating the comparison result.
+        //compare method expects a negative, zero, or positive integer as the return value to indicate the order of the compared objects.
+
         return Integer.compare(result, 0);
+        //result:
+        // If result is negative, it means date1 is before date2.
+        //If result is zero, it means date1 is equal to date2.
+        //If result is positive, it means date1 is after date2.
+        //0:
     }
 }
