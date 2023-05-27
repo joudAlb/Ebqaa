@@ -84,7 +84,7 @@ public class Category extends AppCompatActivity {
             }
         });
 
-        //✅️ when user clicks on the add button, add the category to the database
+        // when user clicks on the add button, add the category to the database
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -136,8 +136,6 @@ public class Category extends AppCompatActivity {
     }
 
 
-
-    //category class
     public Category(int id, String name, int days, int imageNo) {
         this.id = id;
         this.name = name;
