@@ -1,4 +1,5 @@
 //When user adds an item in category
+// facilitates the process of adding items to a category, managing their dates, and setting up alarms for notification purposes.
 package com.joud.ebqaaproject;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,8 +23,8 @@ import android.widget.Toast;
 import java.util.Calendar;
 
 public class Item extends AppCompatActivity {
-    public static final int MIN_YEARS = 2023;//✅ minimum year input by user
-    public static final int MAX_YEARS = 2030;//✅ maximum year input
+    public static final int MIN_YEARS = 2023;// minimum year input by user
+    public static final int MAX_YEARS = 2030;// maximum year input
 
     int noOfDateBoxes = 1, maxDateBoxes = 8;
     int category_id, category_days;
@@ -55,9 +56,8 @@ public class Item extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_item);//✅ display the design by referencing its' xml file
+        setContentView(R.layout.activity_add_item);// display the design by referencing its' xml file
 
-        //‼️
         bundle = getIntent().getExtras();//get category info to give back to item list
         category_id = Integer.parseInt((String) bundle.get("id"));    //get category id
         category_name = (String) bundle.get("name"); //get category name
@@ -65,19 +65,18 @@ public class Item extends AppCompatActivity {
 
         databaseHelper = new DatabaseHelper(Item.this);
 
-        title = findViewById(R.id.page_title);//✅ referencing each attribute with its id from the xml file
+        title = findViewById(R.id.page_title);// referencing each attribute with its id from the xml file
         icon = findViewById(R.id.toolbar_icon);
         add_btn = findViewById(R.id.add_item);
         add_date_box = findViewById(R.id.add_date_box);
         item_name = findViewById(R.id.item_name);
         container = findViewById(R.id.date_box_layout);
 
-        title.setText(R.string.add_item);//✅ set the title of the page
+        title.setText(R.string.add_item);// set the title of the page
 
-        icon.setImageResource(R.drawable.left_arrow);//✅ set back button image
+        icon.setImageResource(R.drawable.left_arrow);// set back button image
         icon.setContentDescription("Return");
 
-        //‼️
         icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -211,7 +210,6 @@ public class Item extends AppCompatActivity {
     }
 
 
-//item class
     public Item(int id, String name, String date, int categoryID) {
         this.id = id;
         this.name = name;
