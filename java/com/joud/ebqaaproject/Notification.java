@@ -20,10 +20,10 @@ public class Notification extends Application {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
                     CHANNEL_ID,
-                    "Item Expiry Reminder",
+                    "Expiration reminder",
                     NotificationManager.IMPORTANCE_HIGH
             );
-            channel.setDescription("This is the Reminder Channel");
+            channel.setDescription("Reminder channel");
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(channel);
         }
