@@ -1,3 +1,4 @@
+//set up the main screen of an application, populates it with data from a database, handles user interactions, and provides navigation to other activities.
 package com.joud.ebqaaproject;
 
 import androidx.appcompat.app.AppCompatActivity;
