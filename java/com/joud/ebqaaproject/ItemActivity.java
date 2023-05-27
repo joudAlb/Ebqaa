@@ -1,3 +1,6 @@
+// display a list of items associated with a selected category, allow users to add new items, delete items, and handle item selection. It also includes functionality to track item expiration dates and set alarms for notification purposes.
+
+//manages the activity for displaying and interacting with the item list
 package com.joud.ebqaaproject;
 
 import androidx.appcompat.app.AppCompatActivity;
