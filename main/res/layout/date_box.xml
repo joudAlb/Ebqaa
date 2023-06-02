@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_box"
+        android:padding="5dp">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:padding="5dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/lato"
+            android:hint="@string/date_hint"
+            android:textColorHint="@color/grey"
+            android:focusable="false"
+            android:background="@color/white"
+            android:onClick="setDate"
+            android:id="@+id/expiry_date"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:src="@drawable/ic_add_blue"
+            android:onClick="addDateBox"
+            android:id="@+id/add_date_box"/>
+    </LinearLayout>

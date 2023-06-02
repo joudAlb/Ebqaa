@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/toolbar"/>
+    <include layout="@layout/divider"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingLeft="0dp"
+            android:paddingStart="0dp"
+            android:text="@string/enter_cat"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/lato" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:background="@drawable/text_box"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:maxLines="1"
+            android:maxLength="30"
+            android:fontFamily="@font/lato"
+            android:id="@+id/item_name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:paddingLeft="0dp"
+            android:paddingStart="0dp"
+            android:text="@string/enter_date"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/lato"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/date_box_layout">
+            <include layout="@layout/date_box"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="@string/add_button"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/lato"
+            android:padding="10dp"
+            android:backgroundTint="@color/light_green"
+            android:id="@+id/add_item"/>
+    </LinearLayout>
+</LinearLayout>
