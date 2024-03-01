@@ -1,6 +1,5 @@
 Ebqa’a Food Tracking Application
 
-Overview
 Ebqa’a is a food tracking application developed to address the pressing issue of food waste, particularly prevalent in Saudi Arabia where statistics indicate a significant portion of food is discarded annually.
 
 Food waste poses substantial environmental, economic, and social challenges. Ebqa’a aims to mitigate these challenges by providing users with a tool to effectively manage their food inventory, prioritize ingredient usage, and contribute to a more sustainable future.
